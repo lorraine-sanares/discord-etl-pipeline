@@ -1,0 +1,723 @@
+{
+  "guild_id": 748845402727645185,
+  "guild_name": "Data Science Student Society",
+  "categories": [
+    {
+      "id": 1257251563622240296,
+      "name": "Execs",
+      "position": 0,
+      "channels": [
+        {
+          "id": 1218755779100938300,
+          "name": "🗓〙exec-meetings",
+          "type": "voice",
+          "position": 0
+        },
+        {
+          "id": 885427020358627338,
+          "name": "🐐exec-chat23-24",
+          "type": "text",
+          "position": 4
+        },
+        {
+          "id": 1274536100052078634,
+          "name": "🐐exec-chat24-25",
+          "type": "text",
+          "position": 5
+        },
+        {
+          "id": 1265473272124932238,
+          "name": "📅exec-discussions",
+          "type": "forum",
+          "position": 6
+        },
+        {
+          "id": 1215913902219591751,
+          "name": "💸〙finance-chat",
+          "type": "text",
+          "position": 7
+        }
+      ]
+    },
+    {
+      "id": 1269865011967299594,
+      "name": "COMMITTEE NOTICE BOARD",
+      "position": 1,
+      "channels": [
+        {
+          "id": 1310765594601324584,
+          "name": "☀〙summer-board",
+          "type": "news",
+          "position": 8
+        },
+        {
+          "id": 1269577591145369601,
+          "name": "📝〙notice-important",
+          "type": "news",
+          "position": 9
+        },
+        {
+          "id": 1269577497117196381,
+          "name": "✅〙notice-actionables",
+          "type": "news",
+          "position": 10
+        },
+        {
+          "id": 1213980386879869018,
+          "name": "🗨〙notice-general",
+          "type": "news",
+          "position": 11
+        },
+        {
+          "id": 1268022160870346823,
+          "name": "🤝〙project-recruitment",
+          "type": "forum",
+          "position": 12
+        },
+        {
+          "id": 1351481668359290891,
+          "name": "✨〙weekly-updates",
+          "type": "forum",
+          "position": 13
+        }
+      ]
+    },
+    {
+      "id": 1257248595367952414,
+      "name": "Committee General",
+      "position": 2,
+      "channels": [
+        {
+          "id": 1313776168855535637,
+          "name": "🧏〙meeting-stage",
+          "type": "stage_voice",
+          "position": 1
+        },
+        {
+          "id": 1229023827543982150,
+          "name": "🙊〙meeting-room-1",
+          "type": "voice",
+          "position": 2
+        },
+        {
+          "id": 1269597250598862909,
+          "name": "🙊〙meeting-room-2",
+          "type": "voice",
+          "position": 3
+        },
+        {
+          "id": 1228258528196689920,
+          "name": "🧩〙games night",
+          "type": "voice",
+          "position": 4
+        },
+        {
+          "id": 1272204531513425941,
+          "name": "🚒〙haps-n-yaps",
+          "type": "news",
+          "position": 14
+        },
+        {
+          "id": 1276750649878384681,
+          "name": "🚒〙polls",
+          "type": "news",
+          "position": 15
+        },
+        {
+          "id": 1276750735287259196,
+          "name": "🚒〙data-leaks",
+          "type": "forum",
+          "position": 16
+        },
+        {
+          "id": 1207981697178804274,
+          "name": "😎〙general",
+          "type": "text",
+          "position": 17
+        },
+        {
+          "id": 1357582844255273050,
+          "name": "🤖〙darcy-torture-chamber",
+          "type": "text",
+          "position": 18
+        },
+        {
+          "id": 1257249169949855846,
+          "name": "💀〙memes",
+          "type": "text",
+          "position": 19
+        },
+        {
+          "id": 1270518600289222720,
+          "name": "🤖〙cool-tech",
+          "type": "text",
+          "position": 20
+        },
+        {
+          "id": 1286653340779806791,
+          "name": "👑〙queens",
+          "type": "text",
+          "position": 21
+        },
+        {
+          "id": 1271436885486604387,
+          "name": "🎲〙random",
+          "type": "text",
+          "position": 22
+        },
+        {
+          "id": 1354249082868203663,
+          "name": "🏖〙retreat-25s1",
+          "type": "forum",
+          "position": 23
+        }
+      ]
+    },
+    {
+      "id": 1257252821716303933,
+      "name": "Committee Teams",
+      "position": 3,
+      "channels": [
+        {
+          "id": 1354789313333825576,
+          "name": "🤖〙ai-at-dscubed",
+          "type": "forum",
+          "position": 24
+        },
+        {
+          "id": 1283362841885413389,
+          "name": "🤝〙general-forums",
+          "type": "forum",
+          "position": 25
+        },
+        {
+          "id": 1212744869865594902,
+          "name": "📰〙events",
+          "type": "forum",
+          "position": 26
+        },
+        {
+          "id": 1212745199558856756,
+          "name": "📱〙marketing",
+          "type": "forum",
+          "position": 27
+        },
+        {
+          "id": 1216257148946743407,
+          "name": "🤓〙education",
+          "type": "forum",
+          "position": 28
+        },
+        {
+          "id": 1212745045900263456,
+          "name": "🏛〙industry",
+          "type": "forum",
+          "position": 29
+        },
+        {
+          "id": 1212745327958827118,
+          "name": "💻〙it",
+          "type": "forum",
+          "position": 30
+        },
+        {
+          "id": 1324574672570024007,
+          "name": "it-git",
+          "type": "text",
+          "position": 31
+        },
+        {
+          "id": 1217707072351768617,
+          "name": "🫂〙human-resources",
+          "type": "forum",
+          "position": 32
+        },
+        {
+          "id": 1217771542272937984,
+          "name": "📒〙data-project",
+          "type": "forum",
+          "position": 33
+        },
+        {
+          "id": 1218813696852234351,
+          "name": "🎨〙design",
+          "type": "forum",
+          "position": 34
+        }
+      ]
+    },
+    {
+      "id": 881045400839139359,
+      "name": "Committee Projects",
+      "position": 4,
+      "channels": [
+        {
+          "id": 1268026292452724806,
+          "name": "📝〙small-projects",
+          "type": "forum",
+          "position": 35
+        },
+        {
+          "id": 1273457594584928387,
+          "name": "🈸〙data-science-ai-awareness-program",
+          "type": "forum",
+          "position": 36
+        },
+        {
+          "id": 1273112025727369216,
+          "name": "🈸〙merch",
+          "type": "forum",
+          "position": 37
+        },
+        {
+          "id": 1220642958995488788,
+          "name": "🈸〙notion",
+          "type": "forum",
+          "position": 38
+        },
+        {
+          "id": 1212938784094683196,
+          "name": "🈸〙discord",
+          "type": "forum",
+          "position": 39
+        },
+        {
+          "id": 1257329982942875719,
+          "name": "💡〙projects-initiative",
+          "type": "forum",
+          "position": 40
+        },
+        {
+          "id": 1283422847083090012,
+          "name": "opportunities-board",
+          "type": "forum",
+          "position": 41
+        },
+        {
+          "id": 1283423903972331530,
+          "name": "job-application-resources",
+          "type": "forum",
+          "position": 42
+        },
+        {
+          "id": 1285595671138795560,
+          "name": "career-mentorship",
+          "type": "forum",
+          "position": 43
+        }
+      ]
+    },
+    {
+      "id": 1316595040335691937,
+      "name": "Administration",
+      "position": 5,
+      "channels": [
+        {
+          "id": 881049374824738816,
+          "name": "discord",
+          "type": "text",
+          "position": 44
+        },
+        {
+          "id": 1316590324444827668,
+          "name": "moderation-logs",
+          "type": "text",
+          "position": 45
+        },
+        {
+          "id": 1316593926513102898,
+          "name": "admin-logs",
+          "type": "text",
+          "position": 46
+        },
+        {
+          "id": 1316591786151383092,
+          "name": "bot-testing",
+          "type": "text",
+          "position": 47
+        },
+        {
+          "id": 1316596309200994326,
+          "name": "warnings",
+          "type": "text",
+          "position": 48
+        },
+        {
+          "id": 1316596346685358192,
+          "name": "commands",
+          "type": "text",
+          "position": 49
+        }
+      ]
+    },
+    {
+      "id": 748845402727645186,
+      "name": "Main",
+      "position": 6,
+      "channels": [
+        {
+          "id": 1336534196302249984,
+          "name": "👋〙welcome",
+          "type": "text",
+          "position": 50
+        },
+        {
+          "id": 1112210913928413234,
+          "name": "💬〙general",
+          "type": "text",
+          "position": 51
+        },
+        {
+          "id": 1207974519193739264,
+          "name": "🙋〙introductions",
+          "type": "forum",
+          "position": 52
+        },
+        {
+          "id": 748845567064539186,
+          "name": "🎭〙memes",
+          "type": "text",
+          "position": 53
+        },
+        {
+          "id": 1212884230653091840,
+          "name": "📅〙daily-fact",
+          "type": "text",
+          "position": 54
+        },
+        {
+          "id": 881052912707575809,
+          "name": "🤖〙use-bots",
+          "type": "text",
+          "position": 55
+        },
+        {
+          "id": 1220251744760500246,
+          "name": "😼〙random-stuff",
+          "type": "forum",
+          "position": 56
+        },
+        {
+          "id": 1216368520388935801,
+          "name": "😼〙the-secret-society",
+          "type": "text",
+          "position": 57
+        },
+        {
+          "id": 1282505671488831498,
+          "name": "stocks-project",
+          "type": "text",
+          "position": 58
+        },
+        {
+          "id": 1282948872313770028,
+          "name": "genetics-project",
+          "type": "text",
+          "position": 59
+        }
+      ]
+    },
+    {
+      "id": 1220250504383168562,
+      "name": "Games",
+      "position": 7,
+      "channels": [
+        {
+          "id": 1216558417339219978,
+          "name": "polls",
+          "type": "news",
+          "position": 60
+        },
+        {
+          "id": 1207211215298764861,
+          "name": "🔠〙wordle",
+          "type": "text",
+          "position": 61
+        },
+        {
+          "id": 1264431734246740014,
+          "name": "🌮〙foodle",
+          "type": "text",
+          "position": 62
+        },
+        {
+          "id": 1209435252687249478,
+          "name": "📊〙counting",
+          "type": "text",
+          "position": 63
+        },
+        {
+          "id": 1209079763306684417,
+          "name": "🎮〙games",
+          "type": "text",
+          "position": 64
+        }
+      ]
+    },
+    {
+      "id": 748845402727645187,
+      "name": "Voice",
+      "position": 8,
+      "channels": [
+        {
+          "id": 748845402727645189,
+          "name": "🪑〙comfy chair",
+          "type": "voice",
+          "position": 5
+        },
+        {
+          "id": 881056056422301757,
+          "name": "🛋〙comfy couch",
+          "type": "voice",
+          "position": 6
+        },
+        {
+          "id": 748845719154065409,
+          "name": "📚〙study room",
+          "type": "voice",
+          "position": 7
+        },
+        {
+          "id": 1220246328160948346,
+          "name": "🧩〙games night",
+          "type": "voice",
+          "position": 8
+        },
+        {
+          "id": 1234746119167148082,
+          "name": "Locked-Room",
+          "type": "voice",
+          "position": 9
+        }
+      ]
+    },
+    {
+      "id": 1230686222545059860,
+      "name": "Inner community 🚀",
+      "position": 9,
+      "channels": [
+        {
+          "id": 1268371183993225286,
+          "name": "🌏〙announcements",
+          "type": "news",
+          "position": 65
+        },
+        {
+          "id": 1230686330913030215,
+          "name": "💬〙general",
+          "type": "text",
+          "position": 66
+        },
+        {
+          "id": 1273434135385346058,
+          "name": "project_committee",
+          "type": "text",
+          "position": 67
+        }
+      ]
+    },
+    {
+      "id": 1202837963587846154,
+      "name": "Study",
+      "position": 10,
+      "channels": [
+        {
+          "id": 1220254992196309023,
+          "name": "🙅〙subject-review",
+          "type": "forum",
+          "position": 68
+        },
+        {
+          "id": 1220248767979061278,
+          "name": "🐼〙study-groups",
+          "type": "text",
+          "position": 69
+        },
+        {
+          "id": 1226097075377274931,
+          "name": "🎷〙music-bot",
+          "type": "text",
+          "position": 70
+        },
+        {
+          "id": 1202838224507113472,
+          "name": "❓〙questions",
+          "type": "text",
+          "position": 71
+        }
+      ]
+    },
+    {
+      "id": 1202831963782783006,
+      "name": "Member's Lounge",
+      "position": 11,
+      "channels": [
+        {
+          "id": 1202839886499938346,
+          "name": "🙋〙club-intros",
+          "type": "forum",
+          "position": 72
+        },
+        {
+          "id": 1072497356521623607,
+          "name": "⛔〙event-help",
+          "type": "text",
+          "position": 73
+        },
+        {
+          "id": 748845449590472744,
+          "name": "🙆〙club-questions",
+          "type": "text",
+          "position": 74
+        },
+        {
+          "id": 881050404413136946,
+          "name": "🎉〙club-suggestions",
+          "type": "text",
+          "position": 75
+        },
+        {
+          "id": 1202836036905078784,
+          "name": "🧭〙career-questions",
+          "type": "text",
+          "position": 76
+        }
+      ]
+    },
+    {
+      "id": 1349165134022578276,
+      "name": "Archive",
+      "position": 15,
+      "channels": [
+        {
+          "id": 1231190108460421171,
+          "name": "announcements",
+          "type": "text",
+          "position": 77
+        },
+        {
+          "id": 1232652401840881674,
+          "name": "data-insights-challenge",
+          "type": "text",
+          "position": 78
+        },
+        {
+          "id": 1231190650116902973,
+          "name": "qna",
+          "type": "text",
+          "position": 79
+        },
+        {
+          "id": 1231190233203343430,
+          "name": "general",
+          "type": "text",
+          "position": 80
+        }
+      ]
+    }
+  ],
+  "ungrouped": [
+    {
+      "id": 1257251563622240296,
+      "name": "Execs",
+      "type": "category",
+      "position": 0
+    },
+    {
+      "id": 881024134367293500,
+      "name": "📜〙rules-and-guidelines",
+      "type": "text",
+      "position": 0
+    },
+    {
+      "id": 1269865011967299594,
+      "name": "COMMITTEE NOTICE BOARD",
+      "type": "category",
+      "position": 1
+    },
+    {
+      "id": 881043670520958988,
+      "name": "📬〙announcements",
+      "type": "news",
+      "position": 1
+    },
+    {
+      "id": 1072496868015222875,
+      "name": "📌〙events",
+      "type": "news",
+      "position": 2
+    },
+    {
+      "id": 1257248595367952414,
+      "name": "Committee General",
+      "type": "category",
+      "position": 2
+    },
+    {
+      "id": 1257252821716303933,
+      "name": "Committee Teams",
+      "type": "category",
+      "position": 3
+    },
+    {
+      "id": 891815274632851486,
+      "name": "🎓〙opportunities",
+      "type": "news",
+      "position": 3
+    },
+    {
+      "id": 881045400839139359,
+      "name": "Committee Projects",
+      "type": "category",
+      "position": 4
+    },
+    {
+      "id": 1316595040335691937,
+      "name": "Administration",
+      "type": "category",
+      "position": 5
+    },
+    {
+      "id": 748845402727645186,
+      "name": "Main",
+      "type": "category",
+      "position": 6
+    },
+    {
+      "id": 1220250504383168562,
+      "name": "Games",
+      "type": "category",
+      "position": 7
+    },
+    {
+      "id": 748845402727645187,
+      "name": "Voice",
+      "type": "category",
+      "position": 8
+    },
+    {
+      "id": 1230686222545059860,
+      "name": "Inner community 🚀",
+      "type": "category",
+      "position": 9
+    },
+    {
+      "id": 1202837963587846154,
+      "name": "Study",
+      "type": "category",
+      "position": 10
+    },
+    {
+      "id": 1202831963782783006,
+      "name": "Member's Lounge",
+      "type": "category",
+      "position": 11
+    },
+    {
+      "id": 1349165134022578276,
+      "name": "Archive",
+      "type": "category",
+      "position": 15
+    }
+  ]
+}
