@@ -13,3 +13,5 @@ wheels/
 # Ignore all JSON and text files
 *.json
 *.txt
+# Ignore lock files
+uv.lock
