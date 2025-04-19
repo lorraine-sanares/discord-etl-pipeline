@@ -26,8 +26,8 @@ A set of Python scripts that use the [discord.py](https://github.com/Rapptz/disc
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your‑username/discord‑exporter.git
-cd discord‑exporter
+git clone https://github.com/supercarryleoliao/Dicord-bot-RAG.git
+cd Dicord-bot-RAG
 ```
 
 ### 2. Install dependencies
