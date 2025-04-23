@@ -25,8 +25,8 @@ from dotenv import load_dotenv
 # 1. Load environment variables from .env
 # -----------------------------------------------------------------------------
 load_dotenv()
-TOKEN = os.getenv("LEO_KEY")               # Bot token for authentication
-GUILD_ID = int(os.getenv("GUILD_ID"))        # Target guild (server) ID
+TOKEN = os.getenv("DARYL_KEY")               # Discord bot token
+GUILD_ID = int(os.getenv("TEST_SERVER_ID"))        # Target server ID (converted to int)
 
 # -----------------------------------------------------------------------------
 # 2. Read previously saved channel list to display options to the user

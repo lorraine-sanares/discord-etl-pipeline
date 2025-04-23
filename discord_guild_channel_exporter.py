@@ -38,8 +38,8 @@ from dotenv import load_dotenv
 # 1. Load environment variables from the .env file
 # -----------------------------------------------------------------------------
 load_dotenv()
-TOKEN = os.getenv("LEO_KEY")               # Discord bot token
-GUILD_ID = int(os.getenv("GUILD_ID"))        # Target server ID (converted to int)
+TOKEN = os.getenv("DARYL_KEY")               # Discord bot token
+GUILD_ID = int(os.getenv("TEST_SERVER_ID"))        # Target server ID (converted to int)
 
 # -----------------------------------------------------------------------------
 # 2. Configure Discord intents
