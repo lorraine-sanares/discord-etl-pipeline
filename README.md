@@ -1,124 +1,108 @@
-# Discord Channel & History Exporter
+# Discord ETL Pipeline
 
-A set of Python scripts that use the [discord.py](https://github.com/Rapptz/discord.py) library to:
-
-1. **Export your server’s channel structure** (categories, text/forums, threads) into JSON.  
-2. **Interactively fetch a single channel’s full message history** into JSON.
+A simple Python ETL pipeline to extract Discord channel and message data, transform chat history JSON into CSV, and prepare it for loading into an AWS RDS database — all automated on a weekly schedule.
 
 ---
 
 ## 📦 Contents
 
-- **`.env`** – your bot credentials (ignored by Git)  
-- **`.gitignore`** – ignores `.env`, logs, JSON exports, etc.  
-- **`discord_guild_channel_exporter.py`** – exports every category, channel & active thread  
-- **`discord_chat_history_exporter.py`** – prompts for a channel ID and exports its message history  
-- **`bot_demo.py`** – a minimal “hello world” Discord bot example  
-- **`main.py`** – (optional) your own orchestration or demo entrypoint  
-- **`*.json` / `*.txt`** – sample/exported data (e.g. `guild_channels_with_threads.json`, `123456789_history.json`)  
-- **`pyproject.toml`**, **`uv.lock`** – project metadata & lockfiles  
-- **`LICENSE`** – MIT License  
+- **`.env`** – your bot & AWS credentials (ignored by Git)
+- **`.gitignore`** – ignores `.env`, logs, JSON exports, etc.
+- **`json_files/`** – stores all exported JSON: guild structure + channel histories
+- **`csv_files/`** – stores all generated CSV chat logs
+- **`discord_guild_channel_exporter.py`** – exports guild channels into `json_files/guild_channels_with_threads.json`
+- **`discord_chat_history_exporter.py`** – batch‑exports every text channel’s history into `json_files/<channel_name>_history.json`
+- **`discord_etl_pipeline.py`** – orchestrates exporters and transforms all JSON to CSV in `csv_files/`
+- **`scheduler.py`** – runs the full pipeline weekly via Python scheduler
+- **`pyproject.toml`**, **`uv.lock`** – project metadata & lockfiles
+- **`LICENSE`** – MIT License
 
 ---
 
-## 🚀 Getting Started
+## ⚙️ Requirements
 
-### 1. Clone the repo
+- Python 3.12+
+- Dependencies:
+  ```bash
+  pip install python-dotenv discord-py pandas requests schedule
+  ```
 
-```bash
-git clone https://github.com/supercarryleoliao/Dicord-bot-RAG.git
-cd Dicord-bot-RAG
-```
+---
 
-### 2. Install dependencies
+## 🔧 Configuration
 
-```bash
-pip install python-dotenv discord.py
-```
+Create a `.env` file in the project root:
 
-Or, if you prefer:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Configure your credentials
-
-Create a file named `.env` in the project root:
-
-```dotenv
-# .env
+```env
+# Discord
 DARCY_KEY=<YOUR_DISCORD_BOT_TOKEN>
-GUILD_ID=<YOUR_DISCORD_SERVER_ID>
+TEST_SERVER_ID=<YOUR_DISCORD_SERVER_ID>
+
+# (Optional) AWS RDS — extend the pipeline to load CSV into RDS
+AWS_HOST=<YOUR_RDS_HOST>
+AWS_PORT=<YOUR_RDS_PORT>
+AWS_DB=<YOUR_RDS_DATABASE>
+AWS_USER=<YOUR_RDS_USERNAME>
+AWS_PASSWORD=<YOUR_RDS_PASSWORD>
 ```
 
-> **Note:** Never commit your real `.env`—it’s already in `.gitignore`.
+> **Never commit** your real `.env` — it’s already in `.gitignore`.
 
 ---
 
-## 📝 Usage
+## 🚀 Usage
 
-### Export your server’s channel & thread structure
+All scripts can be run via `uv run <script>.py`, but you can also call them with plain `python`.
+
+### 1. Export guild structure
 
 ```bash
-# With Python
-python discord_guild_channel_exporter.py
-
-# Or with 'uv' (if you have Uvicorn or another runner)
 uv run discord_guild_channel_exporter.py
 ```
-
-This will create `guild_channels_with_threads.json`:
-
-```jsonc
-{
-  "guild_id": 123456789012345678,
-  "guild_name": "My Server",
-  "categories": [ /* … */ ],
-  "ungrouped":    [ /* … */ ]
-}
+Creates:
+```
+json_files/guild_channels_with_threads.json
 ```
 
----
-
-### Export a channel’s full message history
+### 2. Export all channel histories
 
 ```bash
-python discord_chat_history_exporter.py
+uv run discord_chat_history_exporter.py
+```
+Creates one JSON per text channel:
+```
+json_files/general_history.json
+json_files/random_history.json
+... etc.
 ```
 
-1. The script reads `guild_channels_with_threads.json` and lists all text channels.  
-2. Enter the **ID** of the channel whose history you want.  
-3. It writes `<channel_id>_history.json`, e.g. `987654321098765432_history.json`:
+### 3. Full ETL: JSON → CSV
 
-```jsonc
-[
-  {
-    "id": 111111111111111111,
-    "author": "SomeUser",
-    "content": "Hello, world!",
-    "created_at": "2025-04-20T12:34:56.789000"
-  },
-  /* … */
-]
+```bash
+uv run discord_etl_pipeline.py
 ```
+This will:
+1. Re‑export guild structure & histories
+2. Convert each `*_history.json` to `csv_files/<channel_name>_chat_history.csv`
 
----
+### 4. (Optional) Run once via scheduler
 
-## ⚙️ Configuration & Intents
+To automate weekly ingestion (Monday at 02:00 AM local):
 
-- Make sure your bot in the [Discord Developer Portal](https://discord.com/developers/applications) has **Message Content Intent** enabled under **Bot → Privileged Gateway Intents**.  
-- Your `.env` must contain the **bot token** (not the Application ID or Public Key).
+```bash
+python scheduler.py
+```
+Or integrate into a systemd/cron job if you prefer.
 
 ---
 
 ## 📄 License
 
-This project is released under the MIT License. See [LICENSE](LICENSE) for details.
+Released under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-## 🙋 Questions?
+## ❓ Questions?
 
-Feel free to open an issue or contact me at [ziang.liao@dscubed.org.au].  
-Happy exporting! 🚀
+Open an issue or ping me at lorraine.sanares@dscubed.org.au — happy exporting! 🚀
+
