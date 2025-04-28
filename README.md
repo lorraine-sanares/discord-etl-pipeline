@@ -49,6 +49,13 @@ AWS_PASSWORD=<YOUR_RDS_PASSWORD>
 > **Never commit** your real `.env` — it’s already in `.gitignore`.
 
 ---
+## Before Using
+
+Run this command in the terminal:
+
+```bash
+export SSL_CERT_FILE=$(python -m certifi)
+```
 
 ## 🚀 Usage
 
