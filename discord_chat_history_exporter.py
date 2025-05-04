@@ -67,7 +67,13 @@ async def on_ready():
         print(f"🔄 Exporting {channel_name}...")
         msgs = []
         async for msg in channel.history(limit=None):
-            msgs.append({"id": msg.id, "author": msg.author.name, "content": msg.content, "created_at": msg.created_at.isoformat()})
+            msgs.append({
+                "id": msg.id,
+                "author": msg.author.name,
+                "content": msg.content,
+                "created_at": msg.created_at.isoformat(),
+                "channel_id": channel_id
+            })
 
         out_path = os.path.join("json_files", f"{safe}_history.json")
         with open(out_path, "w", encoding="utf-8") as f:

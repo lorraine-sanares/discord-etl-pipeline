@@ -1,3 +1,4 @@
-created_at,id,author,content
-2025-04-27 23:45:26.967000+00:00,1366198591546462357,th_rt_en,I've made some big repo refactors changes will go over next meeting 🙏
-2025-04-27 21:30:33.324000+00:00,1366164644347248660,th_rt_en,@everyone we will be turning this server into a base of operations for AI @ DSCubed!
+created_at,id,author,content,channel_id
+2025-04-28 04:26:47.228000+00:00,1366269392492695622,th_rt_en,I've given everyone admin,1366164615993626745
+2025-04-27 23:45:26.967000+00:00,1366198591546462357,th_rt_en,I've made some big repo refactors changes will go over next meeting 🙏,1366164615993626745
+2025-04-27 21:30:33.324000+00:00,1366164644347248660,th_rt_en,@everyone we will be turning this server into a base of operations for AI @ DSCubed!,1366164615993626745
