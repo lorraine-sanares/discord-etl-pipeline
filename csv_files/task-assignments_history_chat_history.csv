@@ -1,5 +1,5 @@
-created_at,id,author,content,channel_id
-2025-05-04 03:03:59.344000+00:00,1368422882870563006,Stella,"<@241085495398891521> Nathan, your current tasks are:
+created_at,channel_id,id,author,content
+2025-05-04 03:03:59.344000+00:00,1368422671116795975,1368422882870563006,Stella,"<@241085495398891521> Nathan, your current tasks are:
 - test task (Not started)
 - test task (Not started)
 - Connect to database (Not started)
@@ -7,24 +7,24 @@ created_at,id,author,content,channel_id
 - Write Docs (Not started, due 2025-04-09)
 - Repository and UoW Pattern (Not started, due 2025-04-10)
 - Voice Output (Not started)
-- Voice Input (Not started)",1368422671116795975
-2025-05-04 03:03:57.404000+00:00,1368422874733346890,Stella,"<@872718183692402688> Henry, your current tasks are:
+- Voice Input (Not started)"
+2025-05-04 03:03:57.404000+00:00,1368422671116795975,1368422874733346890,Stella,"<@872718183692402688> Henry, your current tasks are:
 - Complete your engine (Not started, due 2025-05-06)
-- Devops, github workflow, prod dev (Not started, due 2025-04-09)",1368422671116795975
-2025-05-04 03:03:55.756000+00:00,1368422867821133874,Stella,"<@373796704450772992> Pranav, your current tasks are:
+- Devops, github workflow, prod dev (Not started, due 2025-04-09)"
+2025-05-04 03:03:55.756000+00:00,1368422671116795975,1368422867821133874,Stella,"<@373796704450772992> Pranav, your current tasks are:
 - Complete your engine (Not started, due 2025-05-06)
 - Complete data pipeline diagram for data model (Not started, due 2025-04-15)
-- Complete ER diagram for data model (Not started, due 2025-04-15)",1368422671116795975
-2025-05-04 03:03:50.065000+00:00,1368422843951611934,Stella,"<@774065995508744232> Even, your current tasks are:
+- Complete ER diagram for data model (Not started, due 2025-04-15)"
+2025-05-04 03:03:50.065000+00:00,1368422671116795975,1368422843951611934,Stella,"<@774065995508744232> Even, your current tasks are:
 - Complete your engine (In progress, due 2025-05-06)
-- Do 10 pushups (Blocked)",1368422671116795975
-2025-05-04 03:03:49.589000+00:00,1368422841954861197,Stella,"<@1195065884713156728> Antoine, your current task is:
-- Complete your engine (Not started, due 2025-05-06)",1368422671116795975
-2025-05-04 03:03:49.230000+00:00,1368422840449106020,Stella,"<@1215094966846758952> Lorraine, your current task is:
-- Complete your engine (Not started, due 2025-05-06)",1368422671116795975
-2025-05-04 03:03:48.795000+00:00,1368422838624850062,Stella,"<@1283302616759275581> Alina, your current task is:
-- Complete your engine (Not started, due 2025-05-06)",1368422671116795975
-2025-05-04 03:03:48.330000+00:00,1368422836674236457,Stella,"<@946858733756117094> Leo, your current task is:
-- Complete your engine (Not started, due 2025-05-06)",1368422671116795975
-2025-05-04 03:03:47.922000+00:00,1368422834963091608,Stella,"<@768799326141939764> Anthea, your current task is:
-- Complete your engine (Not started, due 2025-05-06)",1368422671116795975
+- Do 10 pushups (Blocked)"
+2025-05-04 03:03:49.589000+00:00,1368422671116795975,1368422841954861197,Stella,"<@1195065884713156728> Antoine, your current task is:
+- Complete your engine (Not started, due 2025-05-06)"
+2025-05-04 03:03:49.230000+00:00,1368422671116795975,1368422840449106020,Stella,"<@1215094966846758952> Lorraine, your current task is:
+- Complete your engine (Not started, due 2025-05-06)"
+2025-05-04 03:03:48.795000+00:00,1368422671116795975,1368422838624850062,Stella,"<@1283302616759275581> Alina, your current task is:
+- Complete your engine (Not started, due 2025-05-06)"
+2025-05-04 03:03:48.330000+00:00,1368422671116795975,1368422836674236457,Stella,"<@946858733756117094> Leo, your current task is:
+- Complete your engine (Not started, due 2025-05-06)"
+2025-05-04 03:03:47.922000+00:00,1368422671116795975,1368422834963091608,Stella,"<@768799326141939764> Anthea, your current task is:
+- Complete your engine (Not started, due 2025-05-06)"
