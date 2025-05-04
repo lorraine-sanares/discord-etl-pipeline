@@ -68,11 +68,11 @@ async def on_ready():
         msgs = []
         async for msg in channel.history(limit=None):
             msgs.append({
+                "channel_id": channel_id,
                 "id": msg.id,
                 "author": msg.author.name,
                 "content": msg.content,
-                "created_at": msg.created_at.isoformat(),
-                "channel_id": channel_id
+                "created_at": msg.created_at.isoformat()
             })
 
         out_path = os.path.join("json_files", f"{safe}_history.json")
