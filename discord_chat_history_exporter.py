@@ -4,7 +4,7 @@ Discord Chat History Exporter (Batch)
 This script:
   1. Loads `json_files/guild_channels_with_threads.json`.
   2. Fetches full message history for each text channel.
-  3. Serializes messages into `json_files/<channel_name>_history.json`.
+  3. Serializes all messages into a single `chat_history.csv` file.
 
 Environment Variables Required:
   • DARCY_KEY      — Your Discord bot token  
@@ -16,6 +16,7 @@ Usage:
 
 import os
 import json
+import csv
 import discord
 import ssl
 from dotenv import load_dotenv
@@ -57,30 +58,52 @@ async def on_ready():
         await client.close()
         return
 
+    all_messages = []
+    total_messages = 0
+    
     for channel_id, channel_name in channel_info:
-        channel = guild.get_channel(channel_id)
-        if not isinstance(channel, TextChannel):
-            print(f"⚠️ Skipping non-text: {channel_name}")
+        try:
+            channel = guild.get_channel(channel_id)
+            if not isinstance(channel, TextChannel):
+                print(f"⚠️ Skipping non-text: {channel_name}")
+                continue
+
+            print(f"🔄 Exporting {channel_name}...")
+            channel_messages = []
+            async for msg in channel.history(limit=None):
+                channel_messages.append({
+                    "channel_id": channel_id,
+                    "channel_name": channel_name,
+                    "message_id": msg.id,
+                    "author": msg.author.name,
+                    "content": msg.content,
+                    "timestamp": msg.created_at.isoformat()
+                })
+            
+            all_messages.extend(channel_messages)
+            total_messages += len(channel_messages)
+            print(f"✅ Exported {len(channel_messages)} messages from {channel_name}")
+            
+        except Exception as e:
+            print(f"❌ Error exporting {channel_name}: {str(e)}")
             continue
 
-        safe = channel_name.replace(" ", "_")
-        print(f"🔄 Exporting {channel_name}...")
-        msgs = []
-        async for msg in channel.history(limit=None):
-            msgs.append({
-                "channel_id": channel_id,
-                "id": msg.id,
-                "author": msg.author.name,
-                "content": msg.content,
-                "created_at": msg.created_at.isoformat()
-            })
-
-        out_path = os.path.join("json_files", f"{safe}_history.json")
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(msgs, f, ensure_ascii=False, indent=2)
-        print(f"✅ Wrote {out_path} ({len(msgs)} messages)")
+    # Write all messages to a single CSV file
+    csv_path = "chat_history.csv"
+    try:
+        with open(csv_path, "w", encoding="utf-8", newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=["channel_id", "channel_name", "message_id", "author", "content", "timestamp"])
+            writer.writeheader()
+            writer.writerows(all_messages)
+        
+        print(f"✅ Wrote {csv_path} ({total_messages} messages total)")
+    except Exception as e:
+        print(f"❌ Error writing CSV file: {str(e)}")
 
     await client.close()
 
 if __name__ == "__main__":
-    client.run(TOKEN)
+    try:
+        client.run(TOKEN)
+    except Exception as e:
+        print(f"❌ Error running client: {str(e)}")
